@@ -5,6 +5,7 @@
 #define CENTER 35
 #define RIGHT 32
 
+ESP32MotorControl MotorControl = ESP32MotorControl();
 
 void setup()
 {
