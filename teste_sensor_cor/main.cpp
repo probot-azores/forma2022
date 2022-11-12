@@ -6,7 +6,7 @@
 #define SENSOR_COR_S2 4
 #define SENSOR_COR_S3 16
 #define SENSOR_COR_OUT 5
-
+int data;
 
 void GetData(){
    data=pulseIn(SENSOR_COR_OUT,LOW);       
@@ -33,18 +33,18 @@ void setup()
 void loop()
 {
  
-   digitalWrite(s2,LOW);        
-   digitalWrite(s3,LOW);
+   digitalWrite(SENSOR_COR_S2,LOW);        
+   digitalWrite(SENSOR_COR_S3,LOW);
    Serial.print("Red value= "); 
    GetData();                   
 
-   digitalWrite(s2,LOW);
-   digitalWrite(s3,HIGH);
+   digitalWrite(SENSOR_COR_S2,LOW);
+   digitalWrite(SENSOR_COR_S3,HIGH);
    Serial.print("Blue value= ");
    GetData();
 
-   digitalWrite(s2,HIGH);
-   digitalWrite(s3,HIGH);
+   digitalWrite(SENSOR_COR_S2,HIGH);
+   digitalWrite(SENSOR_COR_S3,HIGH);
    Serial.print("Green value= ");
    GetData();
 
